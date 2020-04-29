@@ -2,48 +2,116 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
         <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,300&display=swap&subset=cyrillic-ext" rel="stylesheet">
         <title>Tensor School</title>
     </head>
     <body>
-        <header class="title">
-            <img class="title__logo" src="img/logo.jpg" alt="Логотип">
-            <h1 class="title__name" title="Tensor School">Tensor School</h1>
-        </header>
-        <div class="students">
-            <p class="students__title" title="Это страница школы Тензор в Уфе. Тут вы можете познакомиться с нашими учениками и посмотреть темы занятий.">Это страница школы Тензор в Уфе. Тут вы можете познакомиться с нашими учениками и посмотреть темы занятий.</p>
-            <div class="students__items">
-                <div class="students__item">
-                    <img class="students__photo" src="img/ava01.jpg" alt="Аватар ученика школы">
-                    <p class="students__fio" title="Фамилия Имя">Фамилия Имя</p>
-                    <p class="students__university" title="ВУЗ Курс">ВУЗ Курс</p>
+        <div class="container">
+            <header class="header">
+                <p class="header__title">Онлайн-школа Тензор</p>
+                <div class="header__icons">
+                    <div class="header__icon">1</div>
+                    <div class="header__icon">2</div>
+                    <div class="header__icon">3</div>
                 </div>
-                <div class="students__item">
-                    <img class="students__photo" src="img/ava02.jpg" alt="Аватар ученика школы">
-                    <p class="students__fio" title="Фамилия Имя">Двойная-Фамилия Имя</p>
-                    <p class="students__university" title="ВУЗ Курс">ВУЗ Курс</p>
+            </header>
+            <aside class="menu">
+                <div class="menu__item menu__item--title" title="Мои курсы">Мои курсы</div>
+                <div class="menu__item menu__item--select" title="Будущий инженер-
+                программист">Будущий инженер - программист</div>
+                <div class="menu__item" title="Python-разработчик">Python - разработчик</div>
+            </aside>
+            <main class="main">
+                <div class="main__cards">
+                    <div class="main__card">
+                        <img class="main__card__image" src="img/intro.png"></img>
+                        <div class="main__card__body">
+                            <div class="main__card__title">00 - Введение</div>
+                            <div class="main__card__date">20 апреля 2020</div>
+                            <p class="main__card__text">Привет!</br></br>Рад приветствовать тебя на нулевом, вводном занятии. Почему нулевом? Настоящий программист считает с нуля! 😄</p>
+                        </div> 
+                        <div class="main__card__button">Перейти</div>
+                    </div>
+                    <div class="main__card">
+                        <img class="main__card__image" src="img/styles.png"></img>
+                        <div class="main__card__body">
+                            <div class="main__card__title">01 - Стили</div>
+                            <div class="main__card__date">23 апреля 2020</div>
+                            <p class="main__card__text">
+                                Сегодня на занятии мы узнаем</br>
+                                </br>Что такое стили
+                                </br>Из чего они состоят
+                                </br>Какие бывают стили
+                                </br>Познакомились с единицами измерения</p>
+                        </div> 
+                        <div class="main__card__button">Перейти</div>
+                    </div>
+                    <div class="main__card">
+                        <img class="main__card__image" src="img/adaptive.png"></img>
+                        <div class="main__card__body">
+                            <div class="main__card__title">02 - Флексы, адаптивка, ...</div>
+                            <div class="main__card__date">27 апреля 2020</div>
+                            <p class="main__card__text">
+                                Сегодня на вебинаре ты узнаешь, что такое DOM, БЭМ и много других новых слов! Таблицы - прошлый век. Флоуты - устарели. Дивы - криво. Что же делать? Как сверстать красиво и не сломать мозг? Выход есть - Flex & Grid!</p>
+                        </div> 
+                        <div class="main__card__button">Перейти</div>
+                    </div>
+                    <div class="main__card">
+                        <img class="main__card__image" src="img/js.png"></img>
+                        <div class="main__card__body">
+                            <div class="main__card__title">03 - JavaScript: Начало</div>
+                            <div class="main__card__date">30 апреля 2020</div>
+                            <p class="main__card__text">С чего начать изучение JavaScript?Конечно же, с вебинара Онлайн-школы “Тензор”!Синтаксис, типы и структуры данных, функции и их использование - всё здесь!</p>
+                        </div> 
+                        <div class="main__card__button">Перейти</div>
+                    </div>
+                    <div class="main__card">
+                        <img class="main__card__image" src="img/intro.png"></img>
+                        <div class="main__card__body">
+                            <div class="main__card__title">00 - Введение</div>
+                            <div class="main__card__date">20 апреля 2020</div>
+                            <p class="main__card__text">Привет!</br></br>Рад приветствовать тебя на нулевом, вводном занятии. Почему нулевом? Настоящий программист считает с нуля! 😄</p>
+                        </div> 
+                        <div class="main__card__button">Перейти</div>
+                    </div>
+                    <div class="main__card">
+                        <img class="main__card__image" src="img/intro.png"></img>
+                        <div class="main__card__body">
+                            <div class="main__card__title">00 - Введение</div>
+                            <div class="main__card__date">20 апреля 2020</div>
+                            <p class="main__card__text">Привет!</br></br>Рад приветствовать тебя на нулевом, вводном занятии. Почему нулевом? Настоящий программист считает с нуля! 😄</p>
+                        </div> 
+                        <div class="main__card__button">Перейти</div>
+                    </div>
+                    <div class="main__card">
+                        <img class="main__card__image" src="img/intro.png"></img>
+                        <div class="main__card__body">
+                            <div class="main__card__title">00 - Введение</div>
+                            <div class="main__card__date">20 апреля 2020</div>
+                            <p class="main__card__text">Привет!</br></br>Рад приветствовать тебя на нулевом, вводном занятии. Почему нулевом? Настоящий программист считает с нуля! 😄</p>
+                        </div> 
+                        <div class="main__card__button">Перейти</div>
+                    </div>
+                    <div class="main__card">
+                        <img class="main__card__image" src="img/intro.png"></img>
+                        <div class="main__card__body">
+                            <div class="main__card__title">00 - Введение</div>
+                            <div class="main__card__date">20 апреля 2020</div>
+                            <p class="main__card__text">Привет!</br></br>Рад приветствовать тебя на нулевом, вводном занятии. Почему нулевом? Настоящий программист считает с нуля! 😄</p>
+                        </div> 
+                        <div class="main__card__button">Перейти</div>
+                    </div>
                 </div>
-                <div class="students__item">
-                    <img class="students__photo" src="img/ava03.jpg" alt="Аватар ученика школы">
-                    <p class="students__fio" title="Фамилия Имя">Фамилия Имя</p>
-                    <p class="students__university" title="ВУЗ Курс">ВУЗ Курс</p>
-                </div>
-                <div class="students__item">
-                    <img class="students__photo" src="img/ava04.jpg" alt="Аватар ученика школы">
-                    <p class="students__fio" title="Фамилия Имя">Фамилия Имя</p>
-                    <p class="students__university" title="ВУЗ Курс">ВУЗ Курс</p>
-                </div>
-                <div class="students__item">
-                    <img class="students__photo" src="img/ava05.jpg" alt="Аватар ученика школы">
-                    <p class="students__fio" title="Фамилия Имя">Фамилия Имя</p>
-                    <p class="students__university" title="ВУЗ Курс">ВУЗ Курс</p>
-                </div>
-                <div class="students__item">
-                    <img class="students__photo" src="img/ava06.jpg" alt="Аватар ученика школы">
-                    <p class="students__fio" title="Фамилия Имя">Фамилия Имя</p>
-                    <p class="students__university" title="ВУЗ Курс">ВУЗ Курс</p>
-                </div>
-            </div>
+                <div class="main__btn">
+                    <a href="#" class="btn btn--blue">Показать еще</a>
+                </div> 
+            </main>
+            <footer class="footer">
+                <p class="footer__copyright">(c) 2020, Компания “Тензор”</p>
+                <a href="" class="footer__rules_link">Правила пользования</a>
+            </footer>
         </div>
     </body>
 </html>
