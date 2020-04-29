@@ -1,9 +1,7 @@
 body {
-    font-family: Tahoma, Verdana, sans-serif;
-    font-size: 14px;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+    font-family: 'Roboto',Tahoma, Verdana, sans-serif;
+    font-size: 15px;
+    margin: 0;
 }
 *, 
 *:before, 
@@ -15,76 +13,508 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
-/* Title */
-
-.title {
-    text-align: center;
-    margin: 40px auto;
+/* Container */
+.container{
+    display:  grid;
+    grid-template-columns: repeat(14, 1fr);
 }
 
-.title__logo{
+/* Header */
+
+.header{
+    grid-column: span 14;
+    background-color: #37ABFF;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+.header__title{
+    font-size: 24px;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin: 26px 0;
+}
+
+.header__icon {
     display: inline-block;
-    height: 26px;
+    width: 50px;
+    height: 50px;
+    background-color: #59B9FF;
+    border-radius: 50%;
+    font-size: 0;
+    margin: 0 15px;
 }
 
-.title__name{
-    display: inline-block;
-    font-size: 2rem;
-    font-weight: 200;
-    text-transform: uppercase;
+/* Main */
+
+.main{
+    grid-column: span 11;
+    padding: 20px 40px;
 }
 
-.title:after{
-    content: "";
-    display: block;
-    border-top: 3px solid #000;
-    width: 100px;
-    margin: 20px auto;
-}
-
-/* Students*/
-
-.students{
-    text-align: center;
-    margin: 40px auto;
-}
-
-.students__title{
-    font-size: 1.1rem;
-}
-
-.students__items{
+.main__cards{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-self: center;
+    justify-content: space-between;
+}
+
+.main__card{
+    height: 340px;
+    width: 230px;
+    font-size: 16px;
+    line-height: 14px;
+    color: #464646;
+    background-color: #F3F3F3;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    margin: 20px 7px;
+}
+
+.main__card__image{
     width: 100%;
-    margin-top: 30px;
 }
 
-.students__item{
-    margin: 15px 20px 0 20px;
-    width: 170px;
+.main__card__body{
+    margin: 15px 10px 10px 10px;
+    height: 160px;
 }
 
-.students__photo{
-    width: 170px;
-    height: 170px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.students__fio{
-    font-size: 1.1rem;
+.main__card__title{
+    font-weight: 500;
+    font-size: 16px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
 }
 
-.students__university{
-    margin-top: -10px;
-    color:rgb(196, 194, 194);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.main__card__date{
+    font-size: 10px;
+    margin: 10px 0;
+    color: #ABABAB;
 }
+
+.main__card__text{
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.main__card__button{
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    height: 40px;
+    padding: 13px 0;
+    background-color: #DCDCDC;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.main__btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Menu */
+
+.menu {
+    grid-column: span 3;
+    background-color: #EDEDED;
+}
+
+.menu__item {
+    padding: 20px 0 20px 40px;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.menu__item--title {
+    padding-top: 30px;
+    font-weight: 500;
+}
+
+.menu__item--select {
+    background-color: #DCDCDC;
+}
+
+/* Button */
+
+
+.btn{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    padding: 18px 57px;
+    margin: 20px auto;
+    border-radius: 8px;
+    font-family: inherit;
+    border: 0;
+    cursor: pointer;   
+}
+
+.btn--blue{
+    background-color: #37ABFF;
+}
+/* Footer */
+
+.footer {
+    grid-column: span 14;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3C3C3C;
+    padding: 0 40px;
+}
+
+.footer__copyright{
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.footer__rules_link{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    font-family: inherit;
+    border: 0;
+    cursor: pointer;
+}
+
+
+@media all and (max-width: 1366px) {
+    .main__cards{
+        justify-content: space-between;
+    }
+    .header__title{
+        font-size: 20px;
+    }
+    .header__icon {
+        width: 45px;
+        height: 45px;
+    }
+    .main__card{
+        height: 340px;
+        width: 207px;
+        font-size: 16px;
+        line-height: 14px;
+        margin: 20px 5px;
+    }
+    .main__card__body{
+        margin: 15px 10px 10px 10px;
+        height: 170px;
+    }
+    .main__card__title{
+        font-size: 15px;
+    }
+    .main__card__date{
+        font-size: 10px;
+    }
+    .main__card__text{
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .main__card__button{
+        font-size: 16px;
+        height: 40px;
+        padding: 13px 0;
+        border-radius: 0px 0px 10px 10px;
+    }
+    .btn{
+        font-size: 13px;
+        padding: 13px 40px;
+        margin: 10px auto;
+    }
+}
+  
+/* @media all and (max-width: 1366px) {
+    .main__cards{
+        justify-content: space-between;
+    }
+    .header__title{
+        font-size: 20px;
+    }
+    .header__icon {
+        width: 45px;
+        height: 45px;
+    }
+    .main__card{
+        height: 340px;
+        width: 207px;
+        font-size: 16px;
+        line-height: 14px;
+        margin: 20px 5px;
+    }
+    .main__card__body{
+        margin: 15px 10px 10px 10px;
+        height: 170px;
+    }
+    .main__card__title{
+        font-size: 15px;
+    }
+    .main__card__date{
+        font-size: 10px;
+    }
+    .main__card__text{
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .main__card__button{
+        font-weight: 500;
+        font-size: 16px;
+        text-align: center;
+        cursor: pointer;
+        height: 40px;
+        padding: 13px 0;
+        background-color: #DCDCDC;
+        border-radius: 0px 0px 10px 10px;
+    }
+    .btn{
+        font-size: 13px;
+        padding: 13px 40px;
+        margin: 10px auto;
+        border-radius: 8px;
+    }
+} */
+
+@media all and (max-width: 1225px) {
+    .header__title{
+        font-size: 18px;
+    }
+    .header__icon {
+        width: 40px;
+        height: 40px;
+    }
+    .menu__item {
+        padding: 20px 0 20px 30px;
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+@media all and (max-width: 1080px) {
+    .header__title{
+        font-size: 17px;
+        margin: 20px 0;
+    }
+    .header__icon {
+        width: 35px;
+        height: 35px;
+    }
+    .menu__item {
+        padding: 15px 0 15px 30px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
+@media all and (max-width: 950px) {
+    .header__title{
+        font-size: 17px;
+    }
+    .header__icon {
+        width: 35px;
+        height: 35px;
+    }
+    .menu__item {
+        padding: 15px 0 15px 30px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .menu {
+        grid-column: span 14;
+    }
+    .main{
+        grid-column: span 14;
+        padding: 20px 40px;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .header{
+        padding: 0 20px;
+    }
+    .header__title{
+        font-size: 15px;
+        margin: 16px 0;
+    }
+    .header__icon {
+        width: 30px;
+        height: 30px;
+        margin: 0 5px;
+    }
+    .menu__item {
+        padding: 15px 0 15px 30px;
+        font-size: 12px;
+        line-height: 17px;
+    }
+    .menu {
+        grid-column: span 14;
+    }
+    .main {
+        grid-column: span 14;
+    }
+    .main__cards{
+        display: flex;
+        align-items: center;
+    }
+    .main__card{
+        height: 205px;
+        width: 200px;
+        font-size: 13px;
+        line-height: 14px;
+        margin: 10px auto;
+    }
+    .main__card__body{
+        height: 40px;
+    }
+    .main__card__title{
+        font-size: 15px;
+    }
+    .main__card__date{
+        font-size: 11px;
+    }
+    .main__card__text{
+        display: none;
+    }
+    .main__card__button{
+        font-size: 14px;
+        height: 35px;
+    }
+    .footer {
+        padding: 0 20px;
+    }
+    .footer__copyright{
+        font-size: 12px;
+    }
+    .footer__rules_link{
+        font-size: 12px;
+    }
+}
+
+/* @media all and (max-width: 1150px) {
+    .header__title{
+        font-size: 18px;
+    }
+    .menu__item {
+        padding: 20px 0 20px 40px;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    
+    .btn{
+        font-size: 15px;
+        padding: 15px 45px;
+        margin: 15px auto;
+        border-radius: 8px;
+    }
+}
+
+@media all and (max-width: 1050px) {
+    .header__title{
+        font-size: 16px;
+    }
+    .header__icon {
+        width: 40px;
+        height: 40px;
+    }
+    .menu__item {
+        padding: 20px 0 20px 40px;
+        font-size: 15px;
+        line-height: 18px;
+    }
+    
+    .main__card{
+        height: 205px;
+        width: 200px;
+        font-size: 13px;
+        line-height: 14px;
+    }
+    
+    .main__card__body{
+        height: 40px;
+    }
+    
+    .main__card__title{
+        font-size: 15px;
+    }
+    
+    .main__card__date{
+        font-size: 11px;
+    }
+    
+    .main__card__text{
+        display: none;
+    }
+    
+    .main__card__button{
+        font-size: 14px;
+        height: 35px;
+    }
+
+    .btn{
+        font-size: 13px;
+        padding: 13px 40px;
+        margin: 15px auto;
+        border-radius: 8px;
+    }
+}
+
+@media all and (max-width: 1100px) {
+    .header__title{
+        font-size: 12px;
+    }
+    .header__icon {
+        width: 40px;
+        height: 40px;
+    }
+    .menu__item {
+        padding: 20px 0 20px 40px;
+        font-size: 15px;
+        line-height: 18px;
+    }
+    
+    .main__card{
+        height: 205px;
+        width: 200px;
+        font-size: 13px;
+        line-height: 14px;
+    }
+    
+    .main__card__body{
+        height: 40px;
+    }
+    
+    .main__card__title{
+        font-size: 15px;
+    }
+    
+    .main__card__date{
+        font-size: 11px;
+    }
+    
+    .main__card__text{
+        display: none;
+    }
+    
+    .main__card__button{
+        font-size: 14px;
+        height: 35px;
+    }
+
+    .btn{
+        font-size: 13px;
+        padding: 13px 40px;
+        margin: 15px auto;
+        border-radius: 8px;
+    }
+} */
+
