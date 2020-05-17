@@ -3,9 +3,10 @@ import {PersonFactory} from './factory.js';
 class School{
     constructor() {
         this.people = [];
+        this.factory = new PersonFactory();
     }
     add(params, type) {
-        let instance = new PersonFactory().create(params,type);
+        let instance = this.factory.create(params,type);
         (this.people).push(instance);
         // return instance;
     }  
