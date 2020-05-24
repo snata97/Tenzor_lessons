@@ -1,16 +1,16 @@
-import {Student, Teacher, PersonFactory} from './personLib.js';
-import {School} from './school.js';
+import {Header, ContainerPersons, Person, Student, Teacher, ComponentFactory} from './componentLib.js';
 
-// проинициализируем фабрику
-const factory = new PersonFactory();
+let factory = new ComponentFactory();
 
-// создадим школу (если есть для нее фабрика, то тоже через фабрику) 
-let school = new School();
+const head = factory.create(Header, {
+    title: 'Tensor School',
+    description: 'Это страница школы Тензор в Уфе. Тут вы можете познакомиться с нашими учениками и учителями.'  
+});
+head.mount(document.body);
 
-// добавим в список школы студентов используйте те данные, которые у вас есть
-// Vasia и пр. тут скорее для примера
-// если методы называются по другому, поменяйте
-// по желанию можно добавить больше
+const containerPerson = factory.create(ContainerPersons);
+containerPerson.mount(document.body);
+
 const studentArr = [
     {
         fullName: 'Миша Петров',
@@ -22,21 +22,21 @@ const studentArr = [
     {
         fullName: 'Маша Иванова',
         university: 'СурГУ',
-        course: 2,
+        course: 3,
         birthDate: new Date(1993, 2, 7),
         photoUrl: 'img/ava02.jpg'
     },
     {
         fullName: 'Катя Волнова',
         university: 'СевГУ',
-        course: 2,
+        course: 4,
         birthDate: new Date(1996, 4, 15),
         photoUrl: 'img/ava03.jpg'
     },
     {
         fullName: 'Влад Петров',
         university: 'МГУ',
-        course: 2,
+        course: 1,
         birthDate: new Date(1985, 9, 3),
         photoUrl: 'img/ava04.jpg'
     },
@@ -50,11 +50,15 @@ const studentArr = [
     {
         fullName: 'Старик Хотабыч',
         university: 'СпбГУ',
-        course: 2,
+        course: 3,
         birthDate: new Date(1950, 3, 26),
         photoUrl: 'img/ava06.jpg'
     },
  ];
+studentArr.forEach((value) => {
+    factory.create(Student, { item: value}).mount(document.querySelector(".persons__items"))
+});
+
 const teacherArr = [
     {
         fullName: 'Леша Иванов',
@@ -79,20 +83,7 @@ const teacherArr = [
     },
     
  ];
-studentArr.forEach((item) => {
-    school.add(item,'student');
-});
-teacherArr.forEach((item) => {
-    school.add(item,'teacher');
-});
-// school.add( factory.createStudent({ name: 'Vasia' }) );
-// school.add( factory.createStudent({ name: 'Petia' }) );
-// school.add( factory.createTeacher({ name: 'Misha' }) );
 
-// отрисуем всех студентов в dom 
-// если методы называются по другому, поменяйте
-// точка монтирования document.body может быть изменена на любой другой элемент DOM
- school.appendToDom();
-
-// в итоге в на странице должны получить список студентов и учителей
-// папка js будет содержать несколько файлов, минимум 3, а лучше больше
+ teacherArr.forEach((value) => {
+    factory.create(Teacher, { item: value}).mount(document.querySelector(".persons__items"))
+});
