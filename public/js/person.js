@@ -6,7 +6,7 @@ class Person extends Component {
         this.state.item = item;
     }
     
-    render(options, {item}) {
+    render({item}) {
         return `<div class="persons__item">
             <img class="persons__photo" alt="Аватар" src="${item.photoUrl || ''}">
             <p class="persons__fio" title="${item.title || ''}">${item.title || ''}</p>
