@@ -34,6 +34,10 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
 }
 
+.title__body{
+    font-size: 1.1rem;
+}
+
 .title:after{
     content: "";
     display: block;
@@ -47,10 +51,6 @@ h1, h2, h3, h4, h5, h6 {
 .persons{
     text-align: center;
     margin: 40px auto;
-}
-
-.persons__title{
-    font-size: 1.1rem;
 }
 
 .persons__items{
